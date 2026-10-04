@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="application-name" content="voice-task-reminder">
+  <title>AI 語音待辦提醒系統</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><span class="eyebrow">語音・時間・生活</span><h1>AI 語音待辦提醒系統</h1><p>把想做的事說出來，讓每件事都有時間。</p></header>
+    <section class="composer" aria-label="新增任務">
+      <form id="task-form">
+        <label for="task-input">你想記住什麼？</label>
+        <div class="input-row"><input id="task-input" placeholder="請輸入待辦事項" autocomplete="off" required><button type="button" id="voice-button">語音輸入</button></div>
+        <p id="preview" class="hint" aria-live="polite">試試「明早八點提醒我買早餐」</p>
+        <button class="primary" type="submit">新增任務</button>
+      </form>
+      <p id="status" role="status"></p>
+      <p class="hint">也可以使用手機鍵盤上的麥克風。時間不明確時，仍可保存待辦事項。</p>
+    </section>
+    <div class="list-heading"><h2>我的任務</h2><span id="count"></span></div>
+    <div id="task-lists"></div>
+    <footer>資料保存在此瀏覽器。提醒時間供查看與行事曆匯入使用。</footer>
+  </main>
+</body>
+</html>
